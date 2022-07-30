@@ -75,7 +75,7 @@ test('computing for commission fee for natural type cash out with same and new w
             { "date": "2016-02-15", "user_id": 1, "user_type": "natural", "type": "cash_out", "operation": { "amount": 300.00, "currency": "EUR" } }
         ]
    
-    const mockAnswer  = [0.3 ,0.00 ,0.30 ,0.30 ,3.00 ,0.9]
+    const mockAnswer  = [0.3 ,2.70 ,0.30 ,0.30,0.9]
 
     mockData.forEach((mock, index) => {
         expect(getCommisionForNatural(mock.operation.amount, mock.user_id)).toBe(mockAnswer[index])
